@@ -111,6 +111,8 @@ body {
 }
 
 
+
+
 .li_gen_nav:last-child {
     margin-right: 0px;
 }
@@ -373,6 +375,7 @@ body {
 .we_do_section {
     padding: 94px 0px;
     margin: 0 auto;
+    
 }
 
 .we_do  {
@@ -385,17 +388,48 @@ body {
 }
 
 .li_we_do {
+    height: 294px;
     list-style-type:none;
     display: block;
     flex-basis: calc((100% - 90px) / 3);
     flex-wrap: nowrap;
     margin-left: 0px;
     padding: 0;
+    position:relative;
+    
 }
 
 
 .we_do_flex > li:not(:first-child) {
     margin-left: 30px;
+}
+
+
+
+.description{
+    display: block;
+    align-items: center;
+    width: 370px;
+    background-color: rgba(47, 48, 58, 0.8);
+    position:absolute;
+    bottom: 0px;
+    left: 0px;
+ 
+}
+
+
+.h3_text_we_do {
+
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+    margin: 0px;
+    padding: 27px 0px;
 }
 
 
@@ -877,18 +911,21 @@ body {
     margin: 0;
     list-style-type: none; 
     
+    
 }
 
 .projects_item {
     width: 370px;
+    height: 404px;
     padding: 0;
     border-bottom-style:solid;
     border-left-style: solid;
     border-right-style: solid;
     border-width: 1px;
     border-color: #ECECEC;
+    
+    
 }
-
 
 
 .p_projects {
@@ -933,6 +970,45 @@ body {
     display: block;
     display: none;
     }
+
+.overlay_container {
+    position: relative;
+    overflow: hidden;
+    width: 370px;
+    height: 294px;
+
+}
+
+
+
+.text_projects {
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+}
+
+.overlay_p {
+    display: block;
+    box-sizing: border-box;
+    padding: 63px 24px;
+    margin: 0px;
+    background-color: var(--blue);
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 100%;
+
+    transform: translateY(-100%);
+    
+    
+}
+
+.projects_item:hover .overlay_p {
+    transform: translateX(0);
+}
 
 
 /* Сетка*/
