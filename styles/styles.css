@@ -122,7 +122,7 @@ body {
 .a_navigation {
     display: block;
     padding: 32px 0; 
-    color: var(--c212121);
+    color: #212121;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -135,21 +135,6 @@ body {
 
 }
 
-.a_navigation::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 4px;
-    background-color: var(--blue);
-    border-radius: 2px;
-
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    opacity: 0;
-    
- }
 
 
 .a_navigation:hover {
@@ -159,13 +144,33 @@ body {
 }
 
 
-
-.a_navigation:hover::after,
-.a_navigation:active::after {
-    opacity: 1;
+.current {
+    display: block;
+    padding: 32px 0; 
+    color: var(--blue);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none; 
 }
 
+.current::after {
+    content: '';
 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    
+    display: block;
+    background-color: var(--blue);
+    border-radius: 2px;
+
+  
+
+} 
 
 
 
@@ -288,9 +293,17 @@ body {
 
 
 .button_order {
+    display: block;
+    box-sizing: border-box;
+    margin: 30px auto 0px auto;
+    padding: 10px 32px;
+
     background-color: #2196F3;
     border: none;
+    min-width: 200px;
 
+    
+    text-align: center;
     color: var(--white);
     font-weight: 700;
     font-size: 16px;
@@ -299,17 +312,8 @@ body {
     cursor: pointer;
     border-radius: 4px;
 
-    min-width: 200px;
 
-    display: block;
-    box-sizing: border-box;
-
-    text-align: center;
-    margin: 30px auto 0px auto;
-    padding: 10px 32px;
-
-    box-shadow: 0;
-    
+    transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -320,6 +324,7 @@ body {
 .button_order:hover,
 .button_order:focus  {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    
    
     
 }
@@ -1073,9 +1078,6 @@ body {
     border-width: 1px;
     border-color: #ECECEC;
 
-    position: relative;
-    overflow: hidden;
-
     transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1177,6 +1179,16 @@ body {
 }
 */
 
+
+.overlay_container {
+    width: 370px;
+    height: 294px;
+    position: relative;
+
+    overflow: hidden;
+}
+
+
 .overlay_container::before {
     content: '';
 
@@ -1186,7 +1198,7 @@ body {
 
     position: absolute;
     width: 100%;
-    height: 294px;
+    height: 100%;
     top: 0;
     left: 0;
     transform: translateY(100%);
@@ -1214,7 +1226,7 @@ body {
     top: 63px;
     left: 24px;
     width: 100%;
-    height: 294px;
+    height: 100%;
     transform: translateY(100%);
 
     opacity: 1;
