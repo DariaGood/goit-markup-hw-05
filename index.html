@@ -53,7 +53,16 @@
     <section class="hero_backgraund">
         <div class="container solution">
     <h1 class="solutions_text">Эффективные решения для вашего бизнеса</h1>
-    <button type="button" class="button_order">Заказать услугу</button> 
+    <button data-modal-open type="button" class="button_order">Заказать услугу</button> 
+    <div class="backdrop is-hidden">
+        <div class="modal_wrapper" data-modal>
+        <button data-modal-close class="button_oc" type="button"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 1.10786 9.89214 0 5.5 4.39214 1.10786 0 0 1.10786 4.39214 5.5 0 9.89214 1.10786 11 5.5 6.60786 9.89214 11 11 9.89214 6.60786 5.5 11 1.10786Z" fill="#000"/>
+          </svg>
+          </button>
+        <form class="modal form"></form>
+        </div>
+    </div>
         </div>  
     </section>
 
@@ -107,18 +116,18 @@
         <li class="li_we_do">
             <img src="img/image_1.jpg" width="370" height="294" alt="Картинка 1">
             <div class="description">
-                <h3 class="h3_text_we_do">Десктопные приложения</h3>
+                <p class="p_text_we_do">Десктопные приложения</p>
             </div>
         </li>
         <li class="li_we_do"><img src="img/image_2.jpg" width="370" height="294" alt="Картинка 2">
             <div class="description">
-                <h3 class="h3_text_we_do">Мобильные приложения</h3>
+                <p class="p_text_we_do">Мобильные приложения</p>
             </div>
         </li>
         <li class="li_we_do">
             <img src="img/image_3.jpg" width="370" height="294" alt="Картинка 3">
         <div class="description">
-            <h3 class="h3_text_we_do">Дизайнерские решения</h3>
+            <p class="p_text_we_do">Дизайнерские решения</p>
         </div>
         </li>
         </ul>
@@ -368,6 +377,7 @@
 
 </footer> 
 
+<script src="./js/modal.js"></script>
 </body>
 
 
