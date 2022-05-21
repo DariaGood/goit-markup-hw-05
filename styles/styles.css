@@ -386,7 +386,13 @@ body {
 }
 
 
+.svg_close {
+    display: flex;
+    justify-content: center;  
+    align-items: center;  
+    fill: #000000;
 
+}
 
 
 
